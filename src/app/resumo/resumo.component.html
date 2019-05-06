@@ -12,7 +12,7 @@
     <div class="box-faturamento">
         <div class="col-md-10">
             <h1 class="text-left">
-                {{resumo.faturamento.anterior.valor}}</h1>
+                {{resumo.faturamento.anterior.valor | currency:'BRL'}}</h1>
         </div>
         <div class="alert col-md-2 sm" [ngClass]="resumo.faturamento.anterior.comparativo >= 0 ? 'alert-success' : 'alert-danger' ">
             <b>{{resumo.faturamento.anterior.comparativo}}%</b>
@@ -24,7 +24,7 @@
     <div class="box-faturamento">
         <div class="col-md-10">
             <h1 class="text-left">
-                {{resumo.faturamento.previsao.valor}}</h1>
+                {{resumo.faturamento.previsao.valor | currency:'BRL'}}</h1>
         </div>
         <div class="alert col-md-2 sm" [ngClass]="resumo.faturamento.previsao.comparativo >= 0 ? 'alert-success' : 'alert-danger' ">
             <b>{{resumo.faturamento.previsao.comparativo}}%</b>
